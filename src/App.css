@@ -3,12 +3,13 @@ a{
   text-decoration: none;
 }
 *{
-  font-size: 62.5%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
+html{
+  font-size: 62.5%;
+}  
 body{
   background-color: #c1ddf0 ;
 }
@@ -63,7 +64,7 @@ body{
   margin: 2rem;
 }
 .ul-li{
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-family: sans-serif;
   color: #ffff;
 }
