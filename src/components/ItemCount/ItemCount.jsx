@@ -1,8 +1,7 @@
-import "./ItemListContainer.css"
+import "./ItemCount.css"
 import React from 'react'
-import Swal from 'sweetalert2'
 
-function ItemCount({ min, stock, producto }) {
+function ItemCount({ min, stock, producto, addToCart}) {
     const [cantidad, setCantidad] = React.useState(1)
 
     function setPlus() {
@@ -10,16 +9,6 @@ function ItemCount({ min, stock, producto }) {
     }
     function setSub() {
         cantidad > min ? setCantidad(cantidad - 1) : alert("No podes restar mas productos")
-    }
-
-    function add() {
-        Swal.fire({
-            position: 'top',
-            icon: 'success',
-            title: 'Gracias por tu compra!',
-            showConfirmButton: false,
-            timer: 2000
-        })
     }
     return (
         <section className="section-products">
@@ -30,7 +19,7 @@ function ItemCount({ min, stock, producto }) {
                     <h2 className='product-amount'>{cantidad}</h2>
                     <button className='button' onClick={setPlus}>+</button>
                 </div>
-                <button className='button-fin' onClick={add}>Finalizar compra</button>
+                <button className='button-fin' onClick={()=>addToCart(cantidad, producto)}>Finalizar compra</button>
             </div>
         </section>
     )
