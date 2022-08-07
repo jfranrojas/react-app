@@ -1,23 +1,35 @@
-import React from 'react'
-import ItemCount from "../ItemCount/ItemCount"
-import Swal from 'sweetalert2'
+import React, {useEffect, useState} from 'react'
+import ItemList from "../ItemList/ItemList"
+import productos from "../../data/data"
+import "./ItemListContainer.css"
 
-function ItemListContainer({greeting}) {
-  function addToCart(cantidad, producto) {
-    Swal.fire({
-        position: 'top',
-        icon: 'success',
-        title: `Has agregado ${cantidad} del producto ${producto}`,
-        showConfirmButton: false,
-        timer: 2000
-    })
+function getProducto() {
+  return new Promise ((resolve)=>{
+    setTimeout(() => {
+      resolve(productos)
+    }, 2000);
+  })
 }
+function ItemListContainer() {
+  const [data, setData] = useState([])
+  useEffect(()=>{
+    getProducto().then(products =>{
+      setData(products)
+    })
+  }, [])
   return (
     <main>
-        <h1 className='titulo'>{greeting}</h1>
-        <ItemCount producto="Pantalon de jean" stock={10} min={1} addToCart={addToCart} />
+        <>
+        <section className='itemsContainer'>
+          <ItemList data = {data}/>
+        </section>
+        </>
     </main>
   )
-}   
+}
+   
 
 export default ItemListContainer
+
+
+

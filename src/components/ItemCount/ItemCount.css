@@ -23,7 +23,11 @@
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    font-size: 15px;
     
+}
+.button{
+    font-size: 15px;
 }
 .button-fin{
     cursor: pointer;
