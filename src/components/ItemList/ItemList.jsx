@@ -2,8 +2,6 @@ import React from "react";
 import Item from "../Item/Item";
 import "./ItemList.css"
 
-
-
 function ItemList({data}) {
   return (
     data.map((product)=>{
@@ -17,10 +15,8 @@ function ItemList({data}) {
                 precio={product.precio}
             />
             </div>
-            
         )
     })
   )
 }
-
 export default ItemList

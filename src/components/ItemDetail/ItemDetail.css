@@ -1,0 +1,9 @@
+.detailImg{
+    border-radius: 16px;
+    width: 100%;
+}
+.detailData{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+}

@@ -5,6 +5,7 @@ const productos = [
         categoria:"pantalon",
         id:1,
         precio:2400,
+        descripcion: "Un pantalon ideal para vos."
     },
     {
         nombre:"Jogger",
@@ -12,6 +13,7 @@ const productos = [
         categoria:"pantalon",
         id:2,
         precio:3500,
+        descripcion: "Un jogger ideal para vos."
     },
     {
         nombre:"Pantalon cargo",
@@ -19,6 +21,7 @@ const productos = [
         categoria:"pantalon",
         id:3,
         precio:2500,
+        descripcion: "Un pantalon cargo ideal para vos. Gabardina elastizada"
     },
     {
         nombre:"Remera lisa",
@@ -26,6 +29,7 @@ const productos = [
         categoria:"remera",
         id:4,
         precio:1000,
+        descripcion: "Una remera ideal para vos. 100% algodón"
     },
     {
         nombre:"Remera bordada",
@@ -33,6 +37,7 @@ const productos = [
         categoria:"remera",
         id:5,
         precio:2000,
+        descripcion: "Una remera ideal para vos. 100% algodón"
     },
     {
         nombre:"Remera bordada",
@@ -40,6 +45,7 @@ const productos = [
         categoria:"remera",
         id:6,
         precio:2000,
+        descripcion: "Una remera ideal para vos. 100% algodón"
     },
     {
         nombre:"Remera estampda",
@@ -47,6 +53,7 @@ const productos = [
         categoria:"remera",
         id:7,
         precio:3000,
+        descripcion: "Una remera ideal para vos. 100% algodón"
     },
     {
         nombre:"Remera estampda",
@@ -54,6 +61,7 @@ const productos = [
         categoria:"remera",
         id:8,
         precio:3000,
+        descripcion: "Una remera ideal para vos. 100% algodón"
     },
     
 ]

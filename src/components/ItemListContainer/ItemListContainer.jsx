@@ -27,8 +27,6 @@ function ItemListContainer() {
     </main>
   )
 }
-   
-
 export default ItemListContainer
 
 

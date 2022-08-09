@@ -3,7 +3,6 @@ import ItemCount from "../ItemCount/ItemCount";
 import Swal from "sweetalert2";
 import "./Item.css"
 
-
 function Item({nombre, precio, img}) {
     function addToCart() {
         Swal.fire({
@@ -22,7 +21,6 @@ function Item({nombre, precio, img}) {
         <button>Ver más</button>
         <ItemCount stock={5} min={1} addToCart={addToCart} />
         </>
-
     );
 }
 export default Item;
