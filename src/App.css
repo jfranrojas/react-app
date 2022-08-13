@@ -11,7 +11,7 @@ html{
   font-size: 62.5%;
 }  
 body{
-  background-color: #c1ddf0 ;
+  background-color:#F2F4F4  ;
 }
 .App {
   text-align: center;
@@ -47,38 +47,4 @@ body{
   to {
     transform: rotate(360deg);
   }
-}
-.header{
-  background-color: #282c34;
-  position: sticky;
-  top: 0;
-}
-.header-nav{
-  display: flex;
-}
-.nav-ul{
-  color: white;
-  display: flex;
-  justify-content: space-evenly;
-  flex-basis: 100%;
-  margin: 2rem;
-}
-.ul-li{
-  font-size: 1.8rem;
-  font-family: sans-serif;
-  color: #ffff;
-}
-.Icono{
-  font-size: 20px;
-
-}
-.Icono:hover{
-  color: lightblue;
-  cursor: pointer;
-}
-.titulo{
-  font-size: 30px;
-  font-weight: 600;
-  text-align: center;
-  margin-top: 2rem;
 }

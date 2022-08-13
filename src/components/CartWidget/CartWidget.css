@@ -1,0 +1,9 @@
+.icono {
+    font-size: 20px;
+
+}
+
+.icono:hover {
+    color: lightblue;
+    cursor: pointer;
+}

@@ -1,0 +1,23 @@
+.header {
+    background-color: #282c34;
+    position: sticky;
+    top: 0;
+}
+
+.header-nav {
+    display: flex;
+}
+
+.nav-ul {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: 100%;
+    margin: 2rem;
+}
+
+.ul-li {
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    color: #ffff;
+}

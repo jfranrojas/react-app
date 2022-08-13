@@ -2,20 +2,25 @@ import React, {useEffect, useState} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail';
 import productos from "../../data/data"
 import "./ItemDetailContainer.css"
-function getProducto() {
-    return new Promise ((resolve)=>{
-      setTimeout(() => {
-        resolve(productos)
-      }, 2000);
-    })
-  }
+import {useParams} from "react-router-dom"
 function ItemDetailContainer() {
+  const idURL = useParams().id;
+  function getProducto() {
+    let itemEncontrado = productos.find((productos) => productos.id == idURL)
+      return new Promise ((resolve)=>{
+        setTimeout(() => {
+          resolve(itemEncontrado)
+        }, 2000);
+      })
+    }
+    
     const [data, setData] = useState([])
     useEffect(()=>{
         getProducto().then(products =>{
-        setData(products[0])
+        setData(products)
     })
-  }, [])
+  },)
+
   return (
     <main>
         <>

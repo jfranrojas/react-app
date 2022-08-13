@@ -9,10 +9,12 @@ function ItemList({data}) {
             <div className="itemContainer">
             <Item
                 key= {product.id}
+                id= {product.id}
                 img= {product.img}
                 nombre= {product.nombre}
                 categoria = {product.categoria}
                 precio={product.precio}
+                stock={product.stock}
             />
             </div>
         )
