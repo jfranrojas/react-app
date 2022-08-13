@@ -1,7 +1,7 @@
 import "./ItemCount.css"
 import React from 'react'
 
-function ItemCount({ min, stock, producto, addToCart}) {
+function ItemCount({min, stock, producto, addToCart}) {
     const [cantidad, setCantidad] = React.useState(1)
     function setPlus() {
         cantidad < stock ? setCantidad(cantidad + 1) : alert("No hay mas stock")
