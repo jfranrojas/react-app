@@ -23,8 +23,8 @@ function ItemDetail({ data }) {
                 <h2 className="detailNombre">{data.nombre}</h2>
                 <h2 className="detailPrecio">${data.precio}</h2>
                 <h3 className='detailDesc'>{data.descripcion}</h3>
-                <button>Agregar al carrito</button>
-                <ItemCount stock={5} min={1} addToCart={addToCart} />
+                <button className='detailButton'>Agregar al carrito</button>
+                <ItemCount stock={data.stock} min={1} addToCart={addToCart} />
             </div>
         </section>
         </>
