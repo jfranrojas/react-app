@@ -54,7 +54,7 @@
 .itemLink:hover {
     background-color:#b1dbfaca ;
     box-shadow: 0px 15px 20px #D6EAF8 ;
-    color: #fff;
+    color: rgb(53, 53, 53);
     transform: translateY(-7px);
 }
 
