@@ -54,7 +54,7 @@ const productos = [
         stock:8,
     },
     {
-        nombre:"Remera estampda",
+        nombre:"Remera estampada",
         img:"https://images.pexels.com/photos/12257795/pexels-photo-12257795.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         categoria:"Remeras",
         id:7,
@@ -63,7 +63,7 @@ const productos = [
         stock:11,
     },
     {
-        nombre:"Remera estampda",
+        nombre:"Remera estampada",
         img:"https://images.pexels.com/photos/12257795/pexels-photo-12257795.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         categoria:"Remeras",
         id:8,
