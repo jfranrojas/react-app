@@ -24,4 +24,4 @@ yarn-error.log*
 
 /apuntes.txt
 
-data/
+src/data/
