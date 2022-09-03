@@ -1,25 +1,17 @@
 import React, {useEffect, useState} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail';
-import productos from "../../data/data"
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 import "./ItemDetailContainer.css"
 import {useParams} from "react-router-dom"
+
 function ItemDetailContainer() {
-  const idURL = useParams().id;
-  function getProducto() {
-    let itemEncontrado = productos.find((productos) => productos.id == idURL)
-      return new Promise ((resolve)=>{
-        setTimeout(() => {
-          resolve(itemEncontrado)
-        }, 2000);
-      })
-    }
-    
-    const [data, setData] = useState([])
-    useEffect(()=>{
-        getProducto().then(products =>{
-        setData(products)
-    })
-  },)
+  const idUrl = useParams().id;
+  const [data, setData] = useState([])
+  useEffect(() => {
+    const queryDB = getFirestore();
+    const queryDoc = doc(queryDB, 'productos', idUrl);
+    getDoc(queryDoc).then(item => setData({...item.data(), id: item.id}))
+}, [idUrl]);
 
   return (
     <main>
