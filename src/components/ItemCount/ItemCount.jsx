@@ -1,13 +1,17 @@
 import "./ItemCount.css"
-import React from 'react'
+import React, { useState } from 'react'
 
-function ItemCount({min, stock, onAdd}) {
-    const [cantidad, setCantidad] = React.useState(1)
+function ItemCount({ min, stock, onAdd }) {
+    const [cantidad, setCantidad] = useState(1)
     function setPlus() {
-        cantidad < stock ? setCantidad(cantidad + 1) : alert("No hay mas stock")
+        if (cantidad < stock) {
+            setCantidad(cantidad + 1)
+        }
     }
     function setSub() {
-        cantidad > min ? setCantidad(cantidad - 1) : alert("No podes restar mas productos")
+        if(cantidad > min){
+            setCantidad(cantidad - 1)
+        }
     }
     return (
         <section className="section-products">
@@ -17,7 +21,7 @@ function ItemCount({min, stock, onAdd}) {
                     <h2 className='product-amount'>{cantidad}</h2>
                     <button className='button' onClick={setPlus}>+</button>
                 </div>
-                <button className='button-fin' onClick={()=>onAdd(cantidad)}>Agregar al carrito</button>
+                <button className='button-fin' onClick={() => onAdd(cantidad)}>Agregar al carrito</button>
             </div>
         </section>
     )

@@ -1,20 +1,19 @@
 import { createContext, useState } from "react";
 import Swal from "sweetalert2";
-
-//1. Inicializar el context con React.createContext()
-//2. Crear el provider y darle un "value"
-//3. Definir los componentes que van a acceder al context
-//4. Darle acceso a los componentes al context con el hook useContext()
-//5. Los componentes consumer podran acceder y cambiar el value del context
+import { useEffect } from "react";
 
 export const CartContext = createContext();
 
 export function CartProvider({ children }) {
-    const [cart, setCart] = useState([]);
+    const storageCart = JSON.parse(localStorage.getItem("setStogare")) || []
+    const [cart, setCart] = useState(storageCart);
     let copyCart = [...cart];
+    useEffect(() => {
+        localStorage.setItem("setStorage", JSON.stringify(cart))
+    }, [cart])
     //AGREGAR AL CARRITO 
     function addToCart(data, cantidad) {
-        //Primero ver si el objeto ya existe para no duplicarlo
+        if (totalStock(data) > 0){
             let indexCart = findItem(data.id)
             if (isInCart(data.id)) {
                 indexCart.cantidad += cantidad;
@@ -41,11 +40,22 @@ export function CartProvider({ children }) {
                     timer: 1500
                 })
                 setCart(copyCart);
+                }
             }
+        else{
+            Swal.fire({
+                position: 'top',
+                icon: 'error',
+                title: `No se puede agregar más de ${data.stock}, de ${data.nombre} ya que no hay más en stock`,
+                showConfirmButton: false,
+                timer: 1500,
+                timerProgressBar: true,
+            })
         }
+    }
     // FUNCION PARA REMOVER ITEM POR ID
     function removeItem(id) {
-        const itemRemove = findItem(id)
+        const itemRemove = findItem(id);
         const indexItem = copyCart.indexOf(itemRemove)
         copyCart.splice(indexItem, 1)
         setCart(copyCart)
@@ -76,7 +86,6 @@ export function CartProvider({ children }) {
             return data.stock;
         }
     }
-
     // FUNCIONES AUXILIARES 
 
     // FUNCION PARA REVISAR SI EXISTE EL ITEM
@@ -87,8 +96,22 @@ export function CartProvider({ children }) {
     function findItem(id) {
         return (copyCart.findIndex(item => item.id === id))
     }
+    function sumarItemCarrito(id){
+        if(copyCart[id].stock !== 0){
+            copyCart[id].cantidad += 1;
+            copyCart[id].stock -= 1;
+            setCart(copyCart)
+        }
+    }
+    function restarItemCarrito(id){
+        if(copyCart[id].cantidad !== 0){
+            copyCart[id].cantidad -= 1;
+            copyCart[id].stock += 1;
+            setCart(copyCart)
+        }
+    }
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeItem, removeAll, totalCantidad, precioTotal, totalStock }}>
+        <CartContext.Provider value={{ cart, addToCart, removeItem, removeAll, totalCantidad, precioTotal, totalStock, sumarItemCarrito, restarItemCarrito }}>
             {children}
         </CartContext.Provider>
     );

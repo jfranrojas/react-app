@@ -1,9 +1,15 @@
-.icono {
-    font-size: 20px;
-
+.cartWidget:hover{
+    color: var(--main-color);
 }
-
-.icono:hover {
-    color: lightblue;
+.cartWidget{
+    font-size: 2rem;
+    color: #ffff;
+    transition: color .3s;
     cursor: pointer;
+}
+.totalCantidad{
+    color: #ffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: .5rem;
 }

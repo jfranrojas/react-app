@@ -5,7 +5,7 @@ function Item({ nombre, precio, img, id, categoria, stock}) {
     return (
         <>
         <div className="itemContainer">
-            <img className="itemImg" src={img} alt="Imagen" />
+            <img className="itemImg" src={img} alt="Imagen de remera" />
             <h2 className="itemNombre">{nombre}</h2>
             <h2 className="itemPrecio">${precio}</h2>
             <h2 className="itemCategoria">{categoria}</h2>
