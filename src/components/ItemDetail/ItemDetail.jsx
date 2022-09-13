@@ -25,7 +25,7 @@ function ItemDetail({ data }) {
                             <ItemCount stock={totalStock(data)} min={1} onAdd={onAdd}/> :
                             <>
                             <ItemCount stock={totalStock(data)} min={1} onAdd={onAdd}/>
-                            <Link  className="showCart" to={"/cart"}>Ver Carrito</Link>
+                            <Link  className="" to={"/cart"}>Ver Carrito</Link>
                             </>
                             }
                         <p className='detailStock'>Stock disponible: {totalStock(data)}</p>

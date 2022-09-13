@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import { collection, addDoc } from "firebase/firestore";
-import { cartContext } from '../../store/cartContext';
+import { CartContext } from '../../store/CartContext';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import database from "../../services/firebase";
-import "./Checkout.css"
+
 
 function Checkout() {
-    const { cart, totalPrice, clearCart } = useContext(cartContext)
+    const { cart, precioTotal, vaciarCarrito } = useContext(CartContext)
     const [userBuyer, setUserBuyer] = useState({
         name: "",
         phone: "",
@@ -22,7 +22,7 @@ function Checkout() {
     const purchaseOrder = {
         buyer: { ...userBuyer },
         items: [...cart],
-        total: totalPrice(),
+        total: precioTotal(),
         date: new Date(),
     };
     async function handleSubmit(e) {
@@ -30,7 +30,7 @@ function Checkout() {
         const collectionRef = collection(database, "ordenes");
         const ordenes = await addDoc(collectionRef, purchaseOrder);
         setOrderFirebase({ id: ordenes.id, complete: true });
-        clearCart()
+        vaciarCarrito()
     }
     function inputChangeHandler(e) {
         const input = e.target;
@@ -46,7 +46,7 @@ function Checkout() {
                 <div className='thankYouContainer'>
                     <FontAwesomeIcon className="checkIcon" icon={faCircleCheck} />
                     <h1 className='titleThankYou'>Compra exitosa!</h1>
-                    <h2 className='subtitleThankYou'>Gracias por confiar en Sublime {userBuyer.name}</h2>
+                    <h2 className='subtitleThankYou'>Gracias por confiar en TiendaJS {userBuyer.name}</h2>
                     <h3 className='detailCheckOut'>En instante recibirá el detalle de su pedido en la siguiente dirección: {userBuyer.email}</h3>
                     <h3 className='detailCheckOut'>El id de seguimiento de tu compra es: {orderFirebase.id}</h3>
                     <Link to={"/"}> <button className='buttonThankYou'>Seguir Comprando</button></Link>
@@ -74,3 +74,5 @@ function Checkout() {
         )
     }
 }
+
+export default Checkout

@@ -31,7 +31,7 @@ export function CartProvider({ children }) {
             //Si no existe pushearlo al carrito
             else {
                 data.stock -= cantidad;
-                copyCart.push({...data, cantidad});
+                copyCart.push({ ...data, cantidad});
                 Swal.fire({
                     position: 'top',
                     icon: 'success',
@@ -110,8 +110,12 @@ export function CartProvider({ children }) {
             setCart(copyCart)
         }
     }
+    function vaciarCarrito(){
+        copyCart = []
+        setCart(copyCart)
+    }
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeItem, removeAll, totalCantidad, precioTotal, totalStock, sumarItemCarrito, restarItemCarrito }}>
+        <CartContext.Provider value={{ cart, addToCart, removeItem, removeAll, totalCantidad, precioTotal, totalStock, sumarItemCarrito, restarItemCarrito, vaciarCarrito }}>
             {children}
         </CartContext.Provider>
     );
