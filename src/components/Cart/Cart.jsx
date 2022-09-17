@@ -9,7 +9,7 @@ import "./Cart.css";
 
 function Cart() {
     const {cart, removeItem, removeAll, precioTotal, totalCantidad, sumarItemCarrito, restarItemCarrito} = useContext(CartContext);
-    function RemoveItemCart(id){
+    function removeItemCart(id){
         removeItem(id)
     }
     function sumarItem(id){
@@ -18,7 +18,7 @@ function Cart() {
     function restarItem(id){
         restarItemCarrito(id)
     }
-    if (cart.lenght === 0){
+    if (cart.length === 0){
         return (
             <main>
                 <div className='carritoVacioContainer'>
@@ -48,11 +48,11 @@ function Cart() {
                             stock={item.stock}
                             sumarItem={sumarItem}
                             restarItem={restarItem}
-                            RemoveItemCart={RemoveItemCart}
+                            removeItemCart={removeItemCart}
                             />
                         )
                     })}
-                    <button className='cartBorrarTodo' onClick={removeAll}>Vaciar Carrito</button>
+                    <button className='borrarCarrito' onClick={removeAll}>Vaciar Carrito</button>
                 </section>
                 <section className='cartResume'>
                     <h1 className='tituloResume'>Resumen del pedido</h1>
@@ -61,8 +61,8 @@ function Cart() {
                     <h3>Envío: Gratis</h3>
                     <h2>Total a pagar: ${precioTotal()}</h2>
                     <div className='containerBotones'>
-                        <Link to={"/"}><button className='cartResumeButton'>Seguir comprando</button></Link>
-                        <Link to={"/Checkout"}><button className="">Finalizar Compra </button></Link>
+                        <Link to={"/"}><button className='detailButton'>Seguir comprando</button></Link>
+                        <Link to={"/Checkout"}><button className="detailButton">Finalizar Compra </button></Link>
                     </div>
                 </section>
             </main>

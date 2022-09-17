@@ -77,13 +77,14 @@ export function CartProvider({ children }) {
         copyCart.map((index) => total += index.precio * index.cantidad)
         return total;
     }
-    function totalStock(data){
-        let indexStock = findItem(data.id)
+function totalStock(data){
+        let indexStock =  findItem(data.id)
         if (indexStock){
-            return indexStock.stock;
+            return indexStock.stock; 
         }
         else {
             return data.stock;
+
         }
     }
     // FUNCIONES AUXILIARES 
@@ -94,7 +95,7 @@ export function CartProvider({ children }) {
     }
     //FUNCION PARA BUSCAR CON EL ID
     function findItem(id) {
-        return (copyCart.findIndex(item => item.id === id))
+        return (copyCart.find(item => item.id === id))
     }
     function sumarItemCarrito(id){
         if(copyCart[id].stock !== 0){
