@@ -71,3 +71,5 @@ Una vez clickeado el boton de finalizar compra, la página nos lleva a un formul
 <h2>Contacto</h2>
 <hr>
 <a href="https://www.linkedin.com/in/francisco-rojas-16b713140/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="width: 100px">
+
+<a href="mailto:em.franciscorojas@gmail.com"><img target="_blank" src="https://graffica.info/wp-content/uploads/2020/10/antiguo-logo-de-gmail.jpg" style="width: 100px" >
