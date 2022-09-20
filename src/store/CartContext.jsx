@@ -28,7 +28,6 @@ export function CartProvider({ children }) {
                 })
                 setCart(copyCart);
             }
-            //Si no existe pushearlo al carrito
             else {
                 data.stock -= cantidad;
                 copyCart.push({ ...data, cantidad});
@@ -53,25 +52,21 @@ export function CartProvider({ children }) {
             })
         }
     }
-    // FUNCION PARA REMOVER ITEM POR ID
     function removeItem(id) {
         const itemRemove = findItem(id);
         const indexItem = copyCart.indexOf(itemRemove)
         copyCart.splice(indexItem, 1)
         setCart(copyCart)
     }
-    //FUNCION VACIAR CARRITO
     function removeAll() {
         copyCart = []
         setCart(copyCart)
     }
-    // QUITAR EL TOTAL DE PRODUCTOS AGREGADOS AL CARRITO AUNQUE ESTEN REPETIDOS
     function totalCantidad(){
         let cantidadCart = 0;
         copyCart.map(index => cantidadCart += index.cantidad)
         return cantidadCart;
     }
-    //CALCULAR PRECIO TOTAL
     function precioTotal(){
         let total = 0;
         copyCart.map((index) => total += index.precio * index.cantidad)
@@ -87,13 +82,9 @@ function totalStock(data){
 
         }
     }
-    // FUNCIONES AUXILIARES 
-
-    // FUNCION PARA REVISAR SI EXISTE EL ITEM
     function isInCart(id) {
         return (copyCart.some(itemCart => itemCart.id === id))
     }
-    //FUNCION PARA BUSCAR CON EL ID
     function findItem(id) {
         return (copyCart.find(item => item.id === id))
     }

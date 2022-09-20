@@ -4,8 +4,12 @@
 <h2>Descripción:</h2>
 <hr>
 <p>El proyecto es una E-comerce de ropa masculina, creado con react-create-app, y estilado con CSS puro para lograr una mejor visual.
-Cuenta con una sección principal donde se muestran todos los productos disponibles, los cuales se pueden filtrar por categoría tocando la misma en el Nabvar. Al clickear en ver detalle se puede ver el mismo de cada uno de los productos, con una mayor descripcion, donde el usuario puede elegir si agregarlo al carrito o seguir navegando.
-Una vez en el carrito, el usuario tiene la opción de agregar más cantidad de un mismo producto, eliminar el producto del carrito o vaciar el carrito completamente. El cual mantiene los productos agregados si recargamos o cerramos la página, ya que quedan guardados en el storage
+<br>
+Cuenta con una sección principal donde se muestran todos los productos disponibles, los cuales se pueden filtrar por categoría tocando la misma en el Nabvar. 
+<br>
+Al clickear en ver detalle se puede ver el mismo de cada uno de los productos, con una mayor descripcion, donde el usuario puede elegir si agregarlo al carrito o seguir navegando.
+Una vez en el carrito, el usuario tiene la opción de agregar más cantidad de un mismo producto, eliminar el producto del carrito o vaciar el carrito completamente. El cual mantiene los productos agregados si recargamos o cerramos la página, ya que quedan guardados en el storage.
+<br>
 Una vez clickeado el boton de finalizar compra, la página nos lleva a un formulario donde nos pide nuestros datos para seguimiento y terminar el pedido. Para finalmente mostrarnos una página de gracias, cargando nuestros datos en Firebase, que es la base de datos utilizada.</p>
 <h2>Screenshots</h2>
 <h2>Listado de productos </h2>
