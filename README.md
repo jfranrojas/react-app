@@ -53,11 +53,19 @@ Una vez clickeado el boton de finalizar compra, la página nos lleva a un formul
 <li> "web-vitals": "^2.1.4"</li>
 </ul>
 
+
 <h2>Para iniciar el proyecto</h2>
 <hr>
+<p>Copie y pegue este link en su navegador</p>
 <ul>
-<li>npm install i para instalar todas las dependencias</li>
-<li>npm install start para renderizar el proyecto en un host local</li>
+<li>https://63293d38f0950c3886231207--dancing-paprenjak-0cfb9e.netlify.app/</h4>
+</ul>
+<p>Descargar y correr el proyecto
+<ul>
+<li>1. Descargar o clonar el proyecto
+<li>2. npm install para instalar todas las dependencias</li>
+<li>3. npm start para renderizar el proyecto en un host local</li>
+<li>4. Esperar que el navegador abra el proyecto o bien copie y pegue esta URL en su navegador: http://localhost:3000/</li>
 </ul>
 
 <h2>Contacto</h2>
