@@ -23,11 +23,11 @@ function Cart() {
             <main>
                 <div className='carritoVacioContainer'>
                     <div className='tituloVacio'>
-                        <h1>Carrito Vacio</h1>
+                        <h1>Carrito Vacío</h1>
                         <FontAwesomeIcon className='carritoVacioCara' icon={faFaceSadTear} />
                     </div>
                         <span><FontAwesomeIcon className='carritoVacio' icon={faCartArrowDown}/></span>
-                        <Link to={"/"}><button className='cartResumeButtons'>Ir a Comprar </button></Link>
+                        <Link to={"/"}><button className='detailButton'>Ir a Comprar </button></Link>
                 </div>
             </main>
         )
@@ -52,18 +52,19 @@ function Cart() {
                             />
                         )
                     })}
-                    <button className='borrarCarrito' onClick={removeAll}>Vaciar Carrito</button>
+                    <button className='detailButtonVacio' onClick={removeAll}>Vaciar Carrito</button>
                 </section>
-                <section className='cartResume'>
+                <section className='sectionResume'>
                     <h1 className='tituloResume'>Resumen del pedido</h1>
-                    <h3>Cantidad de productos: {totalCantidad()}</h3>
-                    <h3>Subtotal: ${precioTotal()}</h3>
-                    <h3>Envío: Gratis</h3>
-                    <h2>Total a pagar: ${precioTotal()}</h2>
+                    <h3 className='resumeDetalle'>Cantidad de productos: {totalCantidad()}</h3>
+                    <h3 className='resumeDetalle'>Subtotal: ${precioTotal()}</h3>
+                    <h3 className='resumeDetalle'>Envío: Gratis</h3>
+                    <h2 className='resumePago'>Total a pagar: ${precioTotal()}</h2>
                     <div className='containerBotones'>
                         <Link to={"/"}><button className='detailButton'>Seguir comprando</button></Link>
                         <Link to={"/Checkout"}><button className="detailButton">Finalizar Compra </button></Link>
                     </div>
+                    <img className="pagoResume" src="https://siesingenieros.com/wp-content/uploads/2020/10/medios-nuevo.jpg" alt="Metodos de pago"></img>
                 </section>
             </main>
         )

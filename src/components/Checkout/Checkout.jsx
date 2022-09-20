@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import database from "../../services/firebase";
 
+import "./Checkout.css"
+
 
 function Checkout() {
     const { cart, precioTotal, vaciarCarrito } = useContext(CartContext)
@@ -43,31 +45,31 @@ function Checkout() {
     if (orderFirebase.complete === true) {
         return (
             <main className='mainCheckOut'>
-                <div className='thankYouContainer'>
+                <div className='graciasContainer'>
                     <FontAwesomeIcon className="checkIcon" icon={faCircleCheck} />
-                    <h1 className='titleThankYou'>Compra exitosa!</h1>
-                    <h2 className='subtitleThankYou'>Gracias por confiar en TiendaJS {userBuyer.name}</h2>
-                    <h3 className='detailCheckOut'>En instante recibirá el detalle de su pedido en la siguiente dirección: {userBuyer.email}</h3>
-                    <h3 className='detailCheckOut'>El id de seguimiento de tu compra es: {orderFirebase.id}</h3>
-                    <Link to={"/"}> <button className='buttonThankYou'>Seguir Comprando</button></Link>
+                    <h1 className='tituloGracias'>Compra exitosa!</h1>
+                    <h2 className='subtituloGracias'>Gracias por confiar en TiendaJS {userBuyer.name}</h2>
+                    <h3 className='detalleGracias'>En instante recibirá el detalle de su pedido en la siguiente dirección: {userBuyer.email}</h3>
+                    <h3 className='detalleGracias'>El id de tu compra es: {orderFirebase.id}</h3>
+                    <Link to={"/"}> <button className='detailButton'>Seguir Comprando</button></Link>
                 </div>
             </main>
         )
     }
     else {
         return (
-            <main className='mainCheckOut'>
+            <main className='mainCheckout'>
                 <div className='checkoutContainer'>
-                    <h1 className='title'>Finalizar Compra</h1>
+                    <h1 className='titulo'>Finalizar Compra</h1>
                     <form className='formContainer' onSubmit={handleSubmit}>
-                        <legend className='label'>Completa los datos y es tuya!</legend>
+                        <legend className='label'>Completa los datos y finaliza tu compra!</legend>
                         <label className='label' htmlFor="name">Nombre</label>
-                        <input className='formInput' type="text" name='name' value={userBuyer.name} onChange={inputChangeHandler} placeholder='Juan Perez' required></input>
+                        <input className='formInput' type="text" name='name' value={userBuyer.name} onChange={inputChangeHandler} placeholder='Francisco Rojas' required></input>
                         <label className='label' htmlFor="phone">Teléfono</label>
-                        <input className='formInput' type="number" name='phone' value={userBuyer.phone} onChange={inputChangeHandler} placeholder='123456789' required></input>
+                        <input className='formInput' type="tel" name='phone' value={userBuyer.phone} onChange={inputChangeHandler} placeholder='Tu número de teléfono' required></input>
                         <label className='label' htmlFor="email">Email</label>
-                        <input className='formInput' type="email" name='email' value={userBuyer.email} onChange={inputChangeHandler} placeholder='ejemplo@ejemplo.com' required></input>
-                        <input className='buttonForm' type="submit" value='Comprar'></input>
+                        <input className='formInput' type="email" name='email' value={userBuyer.email} onChange={inputChangeHandler} placeholder='em.franciscorojas@gmail.com' required></input>
+                        <input className='detailButton' type="submit" value='Comprar'></input>
                     </form>
                 </div >
             </main>

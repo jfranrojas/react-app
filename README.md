@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+<h1>Tienda JS</h1>
+<hr>
+<p>Este proyecto fue creado en el curso de React de CODERHOUSE</p>
+<h2>Descripción:</h2>
+<hr>
+<p>El proyecto es una E-comerce de ropa masculina, creado con react-create-app, y estilado con CSS puro para lograr una mejor visual.
+Cuenta con una sección principal donde se muestran todos los productos disponibles, los cuales se pueden filtrar por categoría tocando la misma en el Nabvar. Al clickear en ver detalle se puede ver el mismo de cada uno de los productos, con una mayor descripcion, donde el usuario puede elegir si agregarlo al carrito o seguir navegando.
+Una vez en el carrito, el usuario tiene la opción de agregar más cantidad de un mismo producto, eliminar el producto del carrito o vaciar el carrito completamente. El cual mantiene los productos agregados si recargamos o cerramos la página, ya que quedan guardados en el storage
+Una vez clickeado el boton de finalizar compra, la página nos lleva a un formulario donde nos pide nuestros datos para seguimiento y terminar el pedido. Para finalmente mostrarnos una página de gracias, cargando nuestros datos en Firebase, que es la base de datos utilizada.</p>
+<h2>Screenshots</h2>
+<h2>Listado de productos </h2>
+<img src="https://res.cloudinary.com/dn0jp4l3w/image/upload/v1663644644/React/products_gycht7.jpg" alt="Productos">
+<h2> Categorias </h2>
+<img src="https://res.cloudinary.com/dn0jp4l3w/image/upload/v1663644644/React/categoria_srmmyr.jpg" alt="Categorias">
+<h2>Detalle del producto </h2>
+<img src="https://res.cloudinary.com/dn0jp4l3w/image/upload/v1663644643/React/detail_nkyokv.jpg" alt="Detalle del producto">
+<h2>Detalle del carrito </h2>
+<img src="https://res.cloudinary.com/dn0jp4l3w/image/upload/v1663644644/React/cart_badpzo.jpg" alt="Carrito">
+<h2>Formulario de contacto </h2>
+<img src="https://res.cloudinary.com/dn0jp4l3w/image/upload/v1663644643/React/form_hn39c0.jpg" alt="Formulario de contacto">
+<h2>Página de gracias </h2>
+<img src="https://res.cloudinary.com/dn0jp4l3w/image/upload/v1663644643/React/gracias_e217wu.jpg" alt="Pagina de gracias">
+<h2>Tecnologías utilizadas<h2/>
+<hr>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>React Js</li>
+<li>Firebase</li>
+</ul>
+<h2>Dependencias del Proyecto:
+<hr>
+<ul>
+<li>"@fortawesome/fontawesome-svg-core": "^6.1.2" </li>
+<li>"@fortawesome/free-regular-svg-icons": "^6.1.2"</lo>
+<li>"@fortawesome/free-solid-svg-icons": "^6.1.2"</li>
+<li>"@fortawesome/react-fontawesome": "^0.2.0"</li>
+<li>"@testing-library/jest-dom": "^5.16.4"</li>
+<li>"@testing-library/react": "^13.3.0"</li>
+<li>"@testing-library/user-event": "^13.5.0"</li>
+<li>"@uiball/loaders": "^1.2.6"</li>
+<li>"firebase": "^9.9.3"</li>
+<li>"react": "^18.2.0"</li>
+<li>"react-dom": "^18.2.0"</li>
+<li> "react-router-dom": "^6.3.0"</li>
+<li>"react-scripts": "5.0.1"</li>
+<li>"sweetalert2": "^11.4.24"</li>
+<li> "web-vitals": "^2.1.4"</li>
+</ul>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>Para iniciar el proyecto</h2>
+<hr>
+<ul>
+<li>npm install i para instalar todas las dependencias</li>
+<li>npm install start para renderizar el proyecto en un host local</li>
+</ul>
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h2>Contacto</h2>
+<hr>
+<a href="https://www.linkedin.com/in/francisco-rojas-16b713140/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="width: 100px">

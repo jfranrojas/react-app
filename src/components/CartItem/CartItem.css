@@ -1,0 +1,61 @@
+.cartItemContainer{
+    display: grid;
+    grid-template-columns: 30% 65%;
+    background-color: rgba(29, 29, 29, 0.962);
+    column-gap: 2rem;
+    padding: 2rem;
+    border-radius: .6rem;
+    border: solid 2px #ffff;
+    color: #ffff;
+}
+.descContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 2rem;
+}
+.cartImg {
+    max-width: 100%;
+    border-radius: .5rem;
+    box-shadow: 7px 5px 14px -6px #ffffffb8;
+}
+.cartNombre {
+    font-size: 2rem;
+}
+.cartCantidad,
+.cartSubtotal,
+.cartBorrarItem,
+.cartStock {
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.cartBorrarItem {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color .3s;
+}
+.cartBorrarItem:hover{
+    color: rgb(206, 85, 85)  
+}
+.buttonsContainer{
+    display: flex;
+    align-items: center;
+    gap: 3rem
+}
+.products-buttons {
+    background-color: transparent;
+    border: solid 2px #ffff;
+    border-radius: .5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: .5rem;
+    margin: .2rem 0;
+    transition: all .3s;
+    color: #ffff;
+}
+.products-buttons:hover{
+    color: rgb(138, 230, 255);
+    border: solid 2px grey;
+}

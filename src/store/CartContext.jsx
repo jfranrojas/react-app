@@ -5,7 +5,7 @@ import { useEffect } from "react";
 export const CartContext = createContext();
 
 export function CartProvider({ children }) {
-    const storageCart = JSON.parse(localStorage.getItem("setStogare")) || []
+    const storageCart = JSON.parse(localStorage.getItem("setStorage")) || []
     const [cart, setCart] = useState(storageCart);
     let copyCart = [...cart];
     useEffect(() => {

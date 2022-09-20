@@ -8,7 +8,7 @@
     flex-direction: column;
     background-color: #282c34;
     justify-content: center;
-    border-radius: 1rem;
+    border-radius: .7rem;
     align-items: center;
     gap: 2rem;
     padding: 2rem;
@@ -26,13 +26,18 @@
     font-size: 15px;
     
 }
-.button{
+.itemButton{
+    width: 5%;
     font-size: 15px;
 }
 .button-fin{
     cursor: pointer;
-    color: #ffff;
-    background-color:  #6b6b6b ;
-    width: 40%;
-    border-radius: .6rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: lighter;
+    color: black;
+    background-color:#F7F9F9 ;
+    width: 60%;
+    border-radius: .5rem;
+    font-weight: bold;
 }

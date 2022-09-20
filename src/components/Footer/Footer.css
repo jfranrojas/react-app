@@ -1,0 +1,14 @@
+.footer{
+    width: 100%;
+    padding: 3rem;
+    background-color: var(--black);
+    text-align: center;
+    color: var(--white);
+    
+}
+.copyright{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+}

@@ -17,9 +17,9 @@ function ItemCount({ min, stock, onAdd }) {
         <section className="section-products">
             <div className='product-container'>
                 <div className='product-button'>
-                    <button className='button' onClick={setSub}>-</button>
+                    <button className='itemButton' onClick={setSub}>-</button>
                     <h2 className='product-amount'>{cantidad}</h2>
-                    <button className='button' onClick={setPlus}>+</button>
+                    <button className='itemButton' onClick={setPlus}>+</button>
                 </div>
                 <button className='button-fin' onClick={() => onAdd(cantidad)}>Agregar al carrito</button>
             </div>
